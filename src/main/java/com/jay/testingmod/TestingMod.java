@@ -1,5 +1,6 @@
 package com.jay.testingmod;
 
+import com.jay.testingmod.block.ModBlocks;
 import com.jay.testingmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -34,6 +35,7 @@ public class TestingMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading

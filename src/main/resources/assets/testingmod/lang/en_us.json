@@ -1,5 +1,6 @@
 {
   "item.testingmod.amethyst": "Amethyst",
+  "block.testingmod.amethyst_ore": "Amethyst Ore",
 
   "itemGroup.testingModTab": "Testing Mod"
 }
