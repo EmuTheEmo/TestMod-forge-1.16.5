@@ -1,3 +1,5 @@
 {
-  "item.testingmod.amethyst": "Amethyst"
+  "item.testingmod.amethyst": "Amethyst",
+
+  "itemGroup.testingModTab": "Testing Mod"
 }
