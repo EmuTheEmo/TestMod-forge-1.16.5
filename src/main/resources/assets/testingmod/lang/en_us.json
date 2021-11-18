@@ -3,5 +3,7 @@
   "block.testingmod.amethyst_ore": "Amethyst Ore",
   "block.testingmod.amethyst_block": "Amethyst Block",
 
+  "item.testingmod.firestone": "Firestone",
+
   "itemGroup.testingModTab": "Testing Mod"
 }
