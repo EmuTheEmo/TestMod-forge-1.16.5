@@ -6,5 +6,8 @@
 
   "item.testingmod.firestone": "Firestone",
 
+  "tooltip.testingmod.firestone": "Hold \u00A7eSHIFT\u00A7r for more Information",
+  "tooltip.testingmod.firestone_shift": "Might set you on fire. But also might protect you from it!",
+
   "itemGroup.testingModTab": "Testing Mod"
 }

@@ -4,6 +4,8 @@ import net.minecraft.block.AbstractFireBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -15,8 +17,12 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
+import java.util.List;
 import java.util.Objects;
 
 public class Firestone extends Item {
@@ -37,6 +43,16 @@ public class Firestone extends Item {
         }
 
         return super.onItemUseFirst(stack, context);
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> toolTip, ITooltipFlag flagIn) {
+        if(Screen.hasShiftDown()) {
+            toolTip.add(new TranslationTextComponent("tooltip.testingmod.firestone_shift"));
+        } else {
+            toolTip.add(new TranslationTextComponent("tooltip.testingmod.firestone"));
+        }
+        super.addInformation(stack, worldIn, toolTip, flagIn);
     }
 
     private void rightClickOnCertainBlockState(BlockState clickedBlock, ItemUseContext context, PlayerEntity playerEntity) {
