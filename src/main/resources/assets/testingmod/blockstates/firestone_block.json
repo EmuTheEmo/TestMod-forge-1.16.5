@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "testingmod:block/firestone_block" }
+  }
+}

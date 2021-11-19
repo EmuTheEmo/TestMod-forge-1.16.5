@@ -1,6 +1,7 @@
 package com.jay.testingmod.block;
 
 import com.jay.testingmod.TestingMod;
+import com.jay.testingmod.block.custom.FirestoneBlock;
 import com.jay.testingmod.item.ModItemGroup;
 import com.jay.testingmod.item.ModItems;
 import net.minecraft.block.AbstractBlock;
@@ -28,6 +29,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(8f)));
+
+    public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
+            () -> new FirestoneBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f)));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
