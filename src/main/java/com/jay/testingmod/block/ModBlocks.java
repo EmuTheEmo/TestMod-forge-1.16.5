@@ -56,6 +56,16 @@ public class ModBlocks {
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.IRON)
                     .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f)));
 
+    //Button
+    public static final RegistryObject<Block> AMETHYST_BUTTON = registerBlock("amethyst_button",
+            () -> new StoneButtonBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f).doesNotBlockMovement()));
+
+    //Pressure plate
+    public static final RegistryObject<Block> AMETHYSY_PRESSURE_PLATE = registerBlock("amethyst_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "testingmod:block/amethyst_block"
+  }
+}
