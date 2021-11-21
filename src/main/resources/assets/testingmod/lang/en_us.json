@@ -9,6 +9,8 @@
   "block.testingmod.amethyst_slab": "Amethyst Slab",
   "block.testingmod.amethyst_button": "Amethyst Button",
   "block.testingmod.amethyst_pressure_plate": "Amethyst Pressure Plate",
+  "block.testingmod.amethyst_door": "Amethyst Door",
+  "block.testingmod.amethyst_trapdoor": "Amethyst Trapdoor",
 
   "item.testingmod.firestone": "Firestone",
   "item.testingmod.amethyst_sword": "Amethyst Sword",

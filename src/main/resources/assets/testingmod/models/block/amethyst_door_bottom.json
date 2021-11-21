@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "top": "testingmod:block/amethyst_door_top",
+    "bottom": "testingmod:block/amethyst_door_bottom"
+  }
+}
