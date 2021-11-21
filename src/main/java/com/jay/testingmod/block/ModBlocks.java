@@ -6,6 +6,8 @@ import com.jay.testingmod.item.ModItemGroup;
 import com.jay.testingmod.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.SandBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -33,6 +35,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
             () -> new FirestoneBlock(AbstractBlock.Properties.create(Material.IRON)
                     .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f)));
+
+    public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("amethyst_stairs",
+            () -> new StairsBlock(() -> AMETHYST_BLOCK.get().getDefaultState(),
+                    AbstractBlock.Properties.create(Material.IRON).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool()));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

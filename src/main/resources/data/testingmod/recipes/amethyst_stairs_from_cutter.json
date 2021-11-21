@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "testingmod:amethyst_block"
+  },
+  "result": "testingmod:amethyst_stairs",
+  "count": 1
+}
