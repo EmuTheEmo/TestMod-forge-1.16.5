@@ -9,6 +9,11 @@
   "block.testingmod.amethyst_slab": "Amethyst Slab",
 
   "item.testingmod.firestone": "Firestone",
+  "item.testingmod.amethyst_sword": "Amethyst Sword",
+  "item.testingmod.amethyst_shove": "Amethyst Shovel",
+  "item.testingmod.amethyst_axe": "Amethyst Axe",
+  "item.testingmod.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.testingmod.amethyst_hoe": "Amethyst Hoe",
 
   "tooltip.testingmod.firestone": "Hold \u00A7eSHIFT\u00A7r for more Information",
   "tooltip.testingmod.firestone_shift": "Might set you on fire. But also might protect you from it!",
