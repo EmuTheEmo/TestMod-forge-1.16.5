@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "testingmod:amethyst"
+    },
+    "W": {
+      "item": "testingmod:amethyst_block"
+    }
+  },
+  "result": {
+    "item": "testingmod:amethyst_fence",
+    "count": 3
+  }
+}

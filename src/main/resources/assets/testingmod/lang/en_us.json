@@ -4,6 +4,8 @@
   "block.testingmod.amethyst_block": "Amethyst Block",
   "block.testingmod.firestone_block": "Firestone Block",
   "block.testingmod.amethyst_stairs": "Amethyst Stairs",
+  "block.testingmod.amethyst_fence": "Amethyst Fence",
+  "block.testingmod.amethyst_fence_gate": "Amethyst Fence Gate",
 
   "item.testingmod.firestone": "Firestone",
 

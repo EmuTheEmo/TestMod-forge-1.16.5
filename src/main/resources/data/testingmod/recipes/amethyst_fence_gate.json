@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "testingmod:amethyst"
+    },
+    "W": {
+      "item": "testingmod:amethyst_block"
+    }
+  },
+  "result": {
+    "item": "testingmod:amethyst_fence_gate"
+  }
+}
