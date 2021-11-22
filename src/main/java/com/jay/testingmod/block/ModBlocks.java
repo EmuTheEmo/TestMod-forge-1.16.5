@@ -2,6 +2,7 @@ package com.jay.testingmod.block;
 
 import com.jay.testingmod.TestingMod;
 import com.jay.testingmod.block.custom.FirestoneBlock;
+import com.jay.testingmod.block.custom.OatsBlock;
 import com.jay.testingmod.item.ModItemGroup;
 import com.jay.testingmod.item.ModItems;
 import net.minecraft.block.*;
@@ -76,6 +77,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMETHYST_TRAPDOOR = registerBlock("amethyst_trapdoor",
             () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f).notSolid()));
+
+    //Oats
+    public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop",
+            () -> new OatsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -1,6 +1,7 @@
 package com.jay.testingmod.item;
 
 import com.jay.testingmod.TestingMod;
+import com.jay.testingmod.block.ModBlocks;
 import com.jay.testingmod.item.custom.Firestone;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -66,6 +67,12 @@ public class ModItems {
     public static final RegistryObject<Item> AMETHYST_BOOT = ITEMS.register("amethyst_boots",
             () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET,
                     new Item.Properties().group(ModItemGroup.TESTING_GROUP)));
+
+    //Oats
+    public static final RegistryObject<Item> OATS = ITEMS.register("oats",
+            () -> new BlockItem(ModBlocks.OATS.get(), new Item.Properties()
+                    .food(new Food.Builder().hunger(1).saturation(0.1f).fastToEat().build())
+                    .group(ModItemGroup.TESTING_GROUP)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
