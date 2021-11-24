@@ -4,6 +4,7 @@ import com.jay.testingmod.TestingMod;
 import com.jay.testingmod.block.custom.FirestoneBlock;
 import com.jay.testingmod.block.custom.OatsBlock;
 import com.jay.testingmod.block.custom.RedwoodWood;
+import com.jay.testingmod.block.custom.trees.RedwoodTree;
 import com.jay.testingmod.item.ModItemGroup;
 import com.jay.testingmod.item.ModItems;
 import com.jay.testingmod.block.custom.RedwoodLog;
@@ -103,6 +104,15 @@ public class ModBlocks {
     //Redwood Planks
     public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
             () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
+
+    //Redwood Leaves
+    public static final RegistryObject<Block> REDWOOD_LEAVES = registerBlock("redwood_leaves",
+            () -> new LeavesBlock(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f)
+                    .tickRandomly().sound(SoundType.PLANT).notSolid()));
+
+    //Redwood Sapling
+    public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
+            () -> new SaplingBlock(new RedwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
