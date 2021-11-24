@@ -3,8 +3,10 @@ package com.jay.testingmod.block;
 import com.jay.testingmod.TestingMod;
 import com.jay.testingmod.block.custom.FirestoneBlock;
 import com.jay.testingmod.block.custom.OatsBlock;
+import com.jay.testingmod.block.custom.RedwoodWood;
 import com.jay.testingmod.item.ModItemGroup;
 import com.jay.testingmod.item.ModItems;
+import com.jay.testingmod.block.custom.RedwoodLog;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -81,6 +83,26 @@ public class ModBlocks {
     //Oats
     public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop",
             () -> new OatsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    //Redwood Log
+    public static final RegistryObject<Block> REDWOOD_LOG = registerBlock("redwood_log",
+            () -> new RedwoodLog(AbstractBlock.Properties.from(Blocks.OAK_LOG)));
+
+    //Redwood Wood
+    public static final RegistryObject<Block> REDWOOD_WOOD = registerBlock("redwood_wood",
+            () -> new RedwoodWood(AbstractBlock.Properties.from(Blocks.OAK_WOOD)));
+
+    //Stripped Redwood Log
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_LOG = registerBlock("stripped_redwood_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_WOOD)));
+
+    //Stripped Redwood Wood
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = registerBlock("stripped_redwood_wood",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_WOOD)));
+
+    //Redwood Planks
+    public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
+            () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -12,6 +12,11 @@
   "block.testingmod.amethyst_door": "Amethyst Door",
   "block.testingmod.amethyst_trapdoor": "Amethyst Trapdoor",
   "block.testingmod.oats_crop": "Oats",
+  "block.testingmod.redwood_log": "Redwood Log",
+  "block.testingmod.redwood_planks": "Redwood Planks",
+  "block.testingmod.redwood_wood": "Redwood Wood",
+  "block.testingmod.stripped_redwood_log": "Stripped Redwood Log",
+  "block.testingmod.stripped_redwood_wood": "Stripped Redwood Wood",
 
   "item.testingmod.firestone": "Firestone",
   "item.testingmod.amethyst_sword": "Amethyst Sword",
