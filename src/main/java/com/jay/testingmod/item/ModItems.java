@@ -74,6 +74,11 @@ public class ModItems {
                     .food(new Food.Builder().hunger(1).saturation(0.1f).fastToEat().build())
                     .group(ModItemGroup.TESTING_GROUP)));
 
+    //Horse Armor
+    public static RegistryObject<Item> AMETHYST_HORSE_ARMOR = ITEMS.register("amethyst_horse_armor",
+            () -> new HorseArmorItem(9, "amethyst",
+                    new Item.Properties().group(ModItemGroup.TESTING_GROUP)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
