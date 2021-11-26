@@ -97,5 +97,21 @@ public class Firestone extends Item {
             BlockState blockState = AbstractFireBlock.getFireForPlacement(world, blockPos);
             world.setBlockState(blockPos, blockState, 11);
         }
+
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack itemStack) {
+        ItemStack container = itemStack.copy();
+        if (container.attemptDamageItem(1, random, null)) {
+            return ItemStack.EMPTY;
+        } else {
+            return container;
+        }
+    }
+
+    @Override
+    public boolean hasContainerItem(ItemStack stack) {
+        return true;
     }
 }
