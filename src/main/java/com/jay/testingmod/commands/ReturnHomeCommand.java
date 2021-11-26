@@ -1,4 +1,4 @@
-package com.jay.testingmod.vommands;
+package com.jay.testingmod.commands;
 
 import com.jay.testingmod.TestingMod;
 import com.mojang.brigadier.CommandDispatcher;

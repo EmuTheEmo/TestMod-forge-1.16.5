@@ -65,6 +65,7 @@ public class TestingMod
         RenderTypeLookup.setRenderLayer(ModBlocks.OATS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_LEAVES.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.HYACINTH.get(), RenderType.getCutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

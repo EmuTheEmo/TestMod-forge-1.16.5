@@ -1,8 +1,8 @@
 package com.jay.testingmod.events;
 
 import com.jay.testingmod.TestingMod;
-import com.jay.testingmod.vommands.ReturnHomeCommand;
-import com.jay.testingmod.vommands.SetHomeCommand;
+import com.jay.testingmod.commands.ReturnHomeCommand;
+import com.jay.testingmod.commands.SetHomeCommand;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
