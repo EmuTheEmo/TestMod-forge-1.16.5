@@ -5,6 +5,7 @@ import com.jay.testingmod.container.ModContainers;
 import com.jay.testingmod.item.ModItems;
 import com.jay.testingmod.screen.LightningChannelerScreen;
 import com.jay.testingmod.tileentity.ModTileEntity;
+import com.jay.testingmod.world.structure.ModStructures;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.ScreenManager;
@@ -46,6 +47,8 @@ public class TestingMod
         ModTileEntity.register(eventBus);
         ModContainers.register(eventBus);
 
+        ModStructures.register(eventBus);
+
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
         eventBus.addListener(this::enqueueIMC);
@@ -63,6 +66,8 @@ public class TestingMod
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
+        ModStructures.setStructures();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
