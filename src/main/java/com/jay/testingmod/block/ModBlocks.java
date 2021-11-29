@@ -1,10 +1,7 @@
 package com.jay.testingmod.block;
 
 import com.jay.testingmod.TestingMod;
-import com.jay.testingmod.block.custom.FirestoneBlock;
-import com.jay.testingmod.block.custom.ModStrippedBlock;
-import com.jay.testingmod.block.custom.OatsBlock;
-import com.jay.testingmod.block.custom.RedwoodWood;
+import com.jay.testingmod.block.custom.*;
 import com.jay.testingmod.block.custom.trees.RedwoodTree;
 import com.jay.testingmod.item.ModItemGroup;
 import com.jay.testingmod.item.ModItems;
@@ -118,6 +115,10 @@ public class ModBlocks {
     //Hyacinth Flower
     public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth",
             () -> new FlowerBlock(Effects.HASTE, 2, AbstractBlock.Properties.from(Blocks.DANDELION)));
+
+    //Lightning Channeler
+    public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",
+            () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

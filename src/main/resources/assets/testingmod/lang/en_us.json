@@ -20,6 +20,7 @@
   "block.testingmod.redwood_leaves": "Redwood Leaves",
   "block.testingmod.redwood_sapling": "Redwood Sapling",
   "block.testingmod.hyacinth": "Hyacinth",
+  "block.testingmod.lightning_channeler": "Lightning Channeler",
 
   "item.testingmod.firestone": "Firestone",
   "item.testingmod.amethyst_sword": "Amethyst Sword",
@@ -32,6 +33,8 @@
   "item.testingmod.amethyst_leggings": "Amethyst Leggings",
   "item.testingmod.amethyst_boots": "Amethyst Boots",
   "item.testingmod.amethyst_horse_armor": "Amethyst Horse Armor",
+
+  "screen.testingmod.lightning_channeler": "Lightning Channeler",
 
   "tooltip.testingmod.firestone": "Hold \u00A7eSHIFT\u00A7r for more Information",
   "tooltip.testingmod.firestone_shift": "Might set you on fire. But also might protect you from it!",

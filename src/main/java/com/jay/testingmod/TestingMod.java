@@ -1,13 +1,18 @@
 package com.jay.testingmod;
 
 import com.jay.testingmod.block.ModBlocks;
+import com.jay.testingmod.container.ModContainers;
 import com.jay.testingmod.item.ModItems;
+import com.jay.testingmod.screen.LightningChannelerScreen;
+import com.jay.testingmod.tileentity.ModTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.EventBus;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -38,6 +43,8 @@ public class TestingMod
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModTileEntity.register(eventBus);
+        ModContainers.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -66,6 +73,9 @@ public class TestingMod
         RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_LEAVES.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.HYACINTH.get(), RenderType.getCutout());
+
+        ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(),
+                LightningChannelerScreen::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
