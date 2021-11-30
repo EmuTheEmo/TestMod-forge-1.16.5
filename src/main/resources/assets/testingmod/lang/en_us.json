@@ -21,6 +21,8 @@
   "block.testingmod.redwood_sapling": "Redwood Sapling",
   "block.testingmod.hyacinth": "Hyacinth",
   "block.testingmod.lightning_channeler": "Lightning Channeler",
+  "block.testingmod.redwood_sign": "Redwood Sign",
+  "block.testingmod.redwood_wall_sign": "Redwood Wall Sign",
 
   "item.testingmod.firestone": "Firestone",
   "item.testingmod.amethyst_sword": "Amethyst Sword",
@@ -33,6 +35,7 @@
   "item.testingmod.amethyst_leggings": "Amethyst Leggings",
   "item.testingmod.amethyst_boots": "Amethyst Boots",
   "item.testingmod.amethyst_horse_armor": "Amethyst Horse Armor",
+  "item.testingmod.redwood_sign": "Redwood Sign",
 
   "screen.testingmod.lightning_channeler": "Lightning Channeler",
 

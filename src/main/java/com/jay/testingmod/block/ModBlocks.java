@@ -120,6 +120,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",
             () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
 
+    //Standing Sign
+    public static final RegistryObject<Block> REDWOOD_SIGN = BLOCKS.register("redwood_sign",
+            () -> new ModStandingSignBlock(AbstractBlock.Properties.create(Material.IRON), ModWoodTypes.REDWOOD));
+
+    //Wall Sign
+    public static final RegistryObject<Block> REDWOOD_WALL_SIGN = BLOCKS.register("redwood_wall_sign",
+            () -> new ModWallSignBlock(AbstractBlock.Properties.create(Material.IRON), ModWoodTypes.REDWOOD));
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

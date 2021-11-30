@@ -1,6 +1,7 @@
 package com.jay.testingmod;
 
 import com.jay.testingmod.block.ModBlocks;
+import com.jay.testingmod.block.ModWoodTypes;
 import com.jay.testingmod.container.ModContainers;
 import com.jay.testingmod.item.ModItems;
 import com.jay.testingmod.screen.LightningChannelerScreen;
@@ -8,15 +9,19 @@ import com.jay.testingmod.tileentity.ModTileEntity;
 import com.jay.testingmod.world.structure.ModStructures;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.WoodType;
 import net.minecraft.client.gui.ScreenManager;
+import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.EventBus;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -68,6 +73,7 @@ public class TestingMod
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
 
         ModStructures.setStructures();
+        WoodType.register(ModWoodTypes.REDWOOD);
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -81,6 +87,10 @@ public class TestingMod
 
         ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(),
                 LightningChannelerScreen::new);
+
+        ClientRegistry.bindTileEntityRenderer(ModTileEntity.SIGN_TILE_ENTITIES.get(),
+                SignTileEntityRenderer::new);
+        Atlases.addWoodType(ModWoodTypes.REDWOOD);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
