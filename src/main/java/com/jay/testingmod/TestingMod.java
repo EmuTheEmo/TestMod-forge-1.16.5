@@ -3,6 +3,7 @@ package com.jay.testingmod;
 import com.jay.testingmod.block.ModBlocks;
 import com.jay.testingmod.block.ModWoodTypes;
 import com.jay.testingmod.container.ModContainers;
+import com.jay.testingmod.fluid.ModFluids;
 import com.jay.testingmod.item.ModItems;
 import com.jay.testingmod.screen.LightningChannelerScreen;
 import com.jay.testingmod.tileentity.ModTileEntity;
@@ -53,6 +54,7 @@ public class TestingMod
         ModContainers.register(eventBus);
 
         ModStructures.register(eventBus);
+        ModFluids.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -85,12 +87,17 @@ public class TestingMod
         RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.HYACINTH.get(), RenderType.getCutout());
 
+        RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
+
         ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(),
                 LightningChannelerScreen::new);
 
         ClientRegistry.bindTileEntityRenderer(ModTileEntity.SIGN_TILE_ENTITIES.get(),
                 SignTileEntityRenderer::new);
         Atlases.addWoodType(ModWoodTypes.REDWOOD);
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

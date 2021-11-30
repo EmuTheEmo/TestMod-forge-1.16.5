@@ -36,6 +36,8 @@
   "item.testingmod.amethyst_boots": "Amethyst Boots",
   "item.testingmod.amethyst_horse_armor": "Amethyst Horse Armor",
   "item.testingmod.redwood_sign": "Redwood Sign",
+  "item.testingmod.oil_bucket": "Oil Bucket",
+  "fluid.testingmod.oil": "Oil",
 
   "screen.testingmod.lightning_channeler": "Lightning Channeler",
 

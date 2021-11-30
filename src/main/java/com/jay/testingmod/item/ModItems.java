@@ -2,6 +2,7 @@ package com.jay.testingmod.item;
 
 import com.jay.testingmod.TestingMod;
 import com.jay.testingmod.block.ModBlocks;
+import com.jay.testingmod.fluid.ModFluids;
 import com.jay.testingmod.item.custom.Firestone;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -83,6 +84,11 @@ public class ModItems {
     public static final RegistryObject<Item> REDWOOD_SIGN = ITEMS.register("redwood_sign",
             () -> new SignItem(new Item.Properties().maxStackSize(16).group(ModItemGroup.TESTING_GROUP),
                     ModBlocks.REDWOOD_SIGN.get(), ModBlocks.REDWOOD_WALL_SIGN.get()));
+
+    //Oil
+    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
+            () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(),
+                    new Item.Properties().maxStackSize(1).group(ModItemGroup.TESTING_GROUP)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

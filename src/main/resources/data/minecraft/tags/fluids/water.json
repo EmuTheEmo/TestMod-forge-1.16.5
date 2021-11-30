@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "testingmod:oil_flowing",
+    "testingmod:oil_fluid"
+  ]
+}
