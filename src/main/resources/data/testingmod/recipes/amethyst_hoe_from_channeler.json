@@ -1,0 +1,15 @@
+{
+  "type": "testingmod:lightning",
+  "weather": "clear",
+  "ingredients": [
+    {
+      "item": "testingmod:amethyst"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "output": {
+    "item": "testingmod:amethyst_hoe"
+  }
+}

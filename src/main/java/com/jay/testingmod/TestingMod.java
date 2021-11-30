@@ -3,6 +3,7 @@ package com.jay.testingmod;
 import com.jay.testingmod.block.ModBlocks;
 import com.jay.testingmod.block.ModWoodTypes;
 import com.jay.testingmod.container.ModContainers;
+import com.jay.testingmod.data.recipes.ModRecipeTypes;
 import com.jay.testingmod.fluid.ModFluids;
 import com.jay.testingmod.item.ModItems;
 import com.jay.testingmod.screen.LightningChannelerScreen;
@@ -55,6 +56,7 @@ public class TestingMod
 
         ModStructures.register(eventBus);
         ModFluids.register(eventBus);
+        ModRecipeTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
