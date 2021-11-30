@@ -5,11 +5,15 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.particles.BlockParticleData;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class FirestoneBlock extends Block {
     public FirestoneBlock(Properties properties) {
@@ -29,6 +33,22 @@ public class FirestoneBlock extends Block {
             }
         }
         return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+    }
+
+    @Override
+    public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
+        float chance = 0.35f;
+        if(chance < random.nextFloat()) {
+            world.addParticle(ParticleTypes.FLAME, pos.getX() + random.nextDouble(),
+                    pos.getY() + 0.5D, pos.getZ() + random.nextDouble(),
+                    0d,0.05d,0d);
+
+            world.addParticle(new BlockParticleData(ParticleTypes.BLOCK, state), pos.getX() + random.nextDouble(),
+                    pos.getY() + 0.5D, pos.getZ() + random.nextDouble(),
+                    0.0D, 0.05D, 0.0D);
+        }
+
+        super.animateTick(state, world, pos, random);
     }
 
     @SuppressWarnings("deprecation")

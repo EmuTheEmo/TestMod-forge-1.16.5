@@ -1,6 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "testingmod:block/firestone_block"
+    "all": "testingmod:block/firestone_block",
+    "particle": "minecraft:block/obsidian"
   }
 }
